@@ -1,0 +1,92 @@
+.listheader {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+}
+
+.list {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+.list:hover {
+    background-color: #111;
+}
+
+.list2 {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+}
+
+.list2:hover {
+    background-color: #111;
+}
+
+.active {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: left;
+    background-color: #FF0000;
+    border-right: 1px solid #bbb;
+}
+
+.active:hover {
+	background-color: #990000;
+}
+
+.active2 {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    float: right;
+    background-color: #FF0000;
+}
+
+.active2:hover {
+	background-color: #990000;
+}
+
+h1 {
+	text-align: center;
+	padding: 18px 20px;
+}
+
+.contact {
+	width: 375px;
+	border: 15px solid #333333;
+	margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.contactinside {
+	font-family:"Arial Black"
+}
+
+.top {
+	
+}
+
+#fylde {
+	display: block;
+	padding; 10px 10px;
+	text-align: center;
+}
