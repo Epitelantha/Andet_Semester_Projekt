@@ -39,6 +39,7 @@ body {
     height: 600px;
 }
 
+
 /*-----------------------------------
 		TEKST
 ------------------------------------*/
@@ -73,20 +74,34 @@ h1 {
 }
 
 /*-----------------------------------
-	Latest Projects
+	Hyperlinks og info
 ------------------------------------*/
 
 /* Container */
 
+.container-fluid {
+    margin: auto;
+    flex-wrap: wrap;
+}
+
 .latestProjects {
-    max-width: 900px;
-    margin: 80px auto 0 auto;
+    margin: 40px auto 20px auto;
+    text-align: center;
+}
+
+.linje {
+    display:inline-block;
+    float:none;
+    top: 0px;
+    vertical-align: top;
+    margin: 0px 60px 0px 60px;
 }
 
 .latestProjects p {
     font-size: 16px;
     color: #757879;
     width: 260px;
+    height: 150px;
     text-align: left;
     margin: 13px auto 60px auto;
 }
@@ -94,13 +109,15 @@ h1 {
 .latestProjects p a {
     font-size: 12px;
     display: block;
-    width: 80px;
+    width: 260px;
     white-space: nowrap;
     margin-top: 6px;
 }
 
 .latestProjects img {
+    top: 0;
     width: 260px;
+    height: 260px;
 }
 
 /*-----------------------------------
@@ -285,6 +302,10 @@ h1 {
     padding: 0;
 }
 
+.noMargin {
+    margin: 0;
+}
+
 .noBorder {
     border: 0;
 }
@@ -330,6 +351,11 @@ h1 {
         text-align: center;
         padding: 5px;
     }
+    
+    .linje {
+    display:block;
+    position:relative;
+}
 
 }
 

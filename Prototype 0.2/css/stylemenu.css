@@ -1,14 +1,13 @@
 .navbar {
     background-color: #333;
     width: 100%;
-    clear: both;
     display: inline-block;
     position: sticky;    
     top: 0;
     left: 0;
-    margin: 0;
-    z-index: 1;
+    margin: auto;
     font: bold 16px sans-serif;
+    z-index: 1;
 }
 
 .navbar a {
@@ -25,6 +24,8 @@
 .navbar {
     transition: padding 0.5s ease;
     padding: 40px 0;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .navbar.scrolled{

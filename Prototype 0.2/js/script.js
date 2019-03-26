@@ -6,7 +6,7 @@ $(function () {
 
     win.scroll(function () {
 
-        if (doc.scrollTop() > 80) {
+        if (doc.scrollTop() > 60) {
             nav.addClass('scrolled');
         } else {
             nav.removeClass('scrolled');
