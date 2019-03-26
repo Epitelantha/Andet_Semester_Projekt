@@ -1,0 +1,123 @@
+
+
+
+
+/*-----------------------------------
+	Latest Projects
+------------------------------------*/
+
+/* Container */
+
+.latestProjects{
+	max-width: 900px;
+	margin : 80px auto 0 auto;
+}
+
+.latestProjects p{
+	font-size: 16px;
+	color: #757879;
+	width: 260px;
+	text-align: left;
+	margin: 13px auto 60px auto;
+}
+
+.latestProjects p a{
+	font-size: 12px;
+	display: block;
+	width: 80px;
+	white-space: nowrap;
+	margin-top: 6px;
+}
+
+.latestProjects img{
+	width:260px;
+}
+
+
+/*-----------------------------------
+	Helper classes
+------------------------------------*/
+
+.noPadding{
+	padding:0;
+}
+
+.noBorder{
+	border: 0;
+}
+
+
+/*-----------------------------------
+	Media querries
+------------------------------------*/
+
+/* On smaller screens */
+
+@media (max-width: 992px) {
+	
+	/* General */
+	
+	body{
+		padding-top: 76px;
+	}
+
+	li{
+		padding-left:8px;
+	}
+	
+	h1 {
+		margin-top: 80px;
+	}
+
+	/* Navigation bar */
+	
+	.navbar{
+		padding: 16px 0;
+	}
+	
+	/* Main picture */
+	
+	.headpicture{
+		height: 250px;
+	}
+	
+	/* Latest Projects */
+	
+	.textStyle{
+		margin-top: 40px;
+	}
+	
+	.titleStyle{
+		margin-top: 70px;
+	}
+	
+	/* Footer */
+	
+	.footer{
+		margin: 40px auto;
+	}
+	
+	#footerLogoText{
+		text-align: center;
+	}
+	
+	/* Sharing buttons */
+	
+	.responsiveAlign {
+		text-align: center;
+		padding: 5px ;
+	}
+
+}
+
+/* On bigger screens */ 
+
+@media (min-width: 993px) {
+	
+	/* Sharing buttons */
+	
+	.responsiveAlign {
+		float: right;
+	}
+}
+

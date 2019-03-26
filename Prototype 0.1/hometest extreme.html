@@ -3,28 +3,31 @@
 
 <head>
     <title>Prototype Hjem</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/stylemenu.css">
-    <link rel="stylesheet" href="css/styletest.css">
+    <link rel="stylesheet" href="css/styletest extreme.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
     <!-- Create.js -->
+
     <script src="lib/easeljs-NEXT.combined.js"></script>
     <script src="lib/preloadjs-0.4.1.min.js"></script>
     <script src="lib/tweenjs-0.5.1.min.js"></script>
-
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    
 </head>
 
-<body onload="init()" style="margin: 0px">
+<body style="margin: 0px">
 
-    <!-- Navigationsbar -->
+    <!--  Navigation Bar -->
+
     <div class="navbar">
+        <a href="home.html">Pheonix Klip</a>
         <a class="active" href="home.html">Home</a>
         <a class="list" href="kalender.html">Kalender</a>
         <a class="list" href="kontakt.html">Kontakt</a>
@@ -46,12 +49,39 @@
         </div>
     </div>
 
-    <canvas id="canvas" width="500" height="550">
-    </canvas>
+    <!-- Main Page -->
 
-    <h1></h1>
+    <div class="container-fluid noPadding">
 
-    <p></p>
+        <div class="container-fluid headpicture"></div>
+
+        <div class="container textstyle">
+            <div class="row text-center latestProjects">
+
+                <div class="">
+                    <a href="home.html">
+                        <img class="imgsize" src="img/logo.png" alt="Logo">
+                    </a>
+                    <p>Hvem vi er:<br>
+                        Vi er en lille famliledrevet frisør med godt humør<a href="home.html">Læs mere →</a></p>
+                </div>
+
+                <div class="">
+                    <a href="kalender.html">
+                        <img class="imgsize" src="img/2.png" alt="kalender">
+                    </a>
+                    <p>Book via vores kalender! <a href="kalender.html">Læs mere →</a></p>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <a href="kontakt.html">
+                        <img class="imgsize" src="img/3.png" alt="telefonlogo">
+                    </a>
+                    <p>Kontakt os online eller via telefon!<a href="kontakt.html">Læs mere →</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer-klasse">
@@ -90,10 +120,13 @@
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/Epitelantha/Andet_Semester_Projekt"><i class="fa fa-github"></i></a>
+                <a href="https://github.com/Epitelantha/Andet_Semester_Projekt" target="_blank"><i class="fa fa-github"></i></a>
             </div>
         </div>
     </footer>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 

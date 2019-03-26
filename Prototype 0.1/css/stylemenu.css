@@ -13,13 +13,23 @@
 
 .navbar a {
     float: left;
-    font-size: 16px;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     border-right: 1px solid #bbb;
-    
+    font-family : Arial, sans-serif;
+	font-size: 16px;
+}
+
+.navbar {
+    transition: padding 0.5s ease;
+    padding: 40px 0;
+}
+
+.navbar.scrolled{
+	box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+	padding: 0;
 }
 
 .active {
