@@ -5,6 +5,7 @@
     display: inline-block;
     position: sticky;    
     top: 0;
+    right: 0;
 }
 
 .navbar a {
@@ -15,6 +16,7 @@
     padding: 14px 16px;
     text-decoration: none;
     border-right: 1px solid #bbb;
+    
 }
 
 .active {
@@ -27,6 +29,10 @@
 
 .list:hover {
     background-color: #111;
+}
+
+#canvas {
+    z-index: 1;
 }
 
 .dropdown {
