@@ -5,7 +5,10 @@
     display: inline-block;
     position: sticky;    
     top: 0;
-    right: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+    font: bold 16px sans-serif;
 }
 
 .navbar a {
@@ -29,10 +32,6 @@
 
 .list:hover {
     background-color: #111;
-}
-
-#canvas {
-    z-index: 1;
 }
 
 .dropdown {

@@ -1,0 +1,210 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    padding: 18px 20px;
+}
+
+#canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.contact {
+    width: 375px;
+    border: 15px solid #333333;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.contactinside {
+    font-family: "Arial Black"
+}
+
+.top {}
+
+#fylde {
+    display: block;
+    padding;
+    10px 10px;
+    text-align: center;
+}
+
+.footer-klasse{
+	background-color: #292c2f;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+
+.footer-klasse .footer-venstre,
+.footer-klasse .footer-center,
+.footer-klasse .footer-hoejre{
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer venstre */
+
+.footer-klasse .footer-venstre{
+	width: 40%;
+}
+
+/* Logo */
+
+.footer-klasse h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+
+.footer-klasse h3 span{
+	color:  #5383d3;
+}
+
+/* Footer links */
+
+.footer-klasse .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+
+.footer-klasse .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-klasse .footer-navn{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer Center */
+
+.footer-klasse .footer-center{
+	width: 35%;
+}
+
+.footer-klasse .footer-center i{
+	background-color:  #33383b;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-klasse .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-klasse .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+
+.footer-klasse .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+
+.footer-klasse .footer-center p a{
+	color:  #5383d3;
+	text-decoration: none;;
+}
+
+
+/* Footer Højre */
+
+.footer-klasse .footer-hoejre{
+	width: 20%;
+}
+
+.footer-klasse .footer-om{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+
+.footer-klasse .footer-om span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-klasse .footer-ikoner{
+	margin-top: 25px;
+}
+
+.footer-klasse .footer-ikoner a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Dette gør footeren responsiv */
+
+@media (max-width: 880px) {
+
+	.footer-klasse{
+		font: bold 14px sans-serif;
+	}
+
+	.footer-klasse .footer-venstre,
+	.footer-klasse .footer-center,
+	.footer-klasse .footer-hoejre{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+
+	.footer-klasse .footer-center i{
+		margin-left: 0;
+	}
+
+}

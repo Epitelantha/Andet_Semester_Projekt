@@ -1,26 +1,49 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow-x: hidden;
+}
+
 h1 {
-	text-align: center;
-	padding: 18px 20px;
+    text-align: center;
+    padding: 18px 20px;
+}
+
+#canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 .contact {
-	width: 375px;
-	border: 15px solid #333333;
-	margin: auto;
+    width: 375px;
+    border: 15px solid #333333;
+    margin: auto;
     width: 50%;
     text-align: center;
 }
 
 .contactinside {
-	font-family:"Arial Black"
+    font-family: "Arial Black"
 }
 
-.top {
-	
-}
+.top {}
 
 #fylde {
-	display: block;
-	padding; 10px 10px;
-	text-align: center;
+    display: block;
+    padding;
+    10px 10px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #FF0000;
+    color: #fff;
 }
