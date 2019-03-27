@@ -2,14 +2,19 @@ $(function () {
 
     var nav = $('.navbar'),
         doc = $(document),
-        win = $(window);
+        win = $(window),
+        ico = $('.fa');
 
     win.scroll(function () {
 
         if (doc.scrollTop() > 60) {
-            nav.addClass('scrolled');
+            nav.addClass('scrolled'),
+            ico.removeClass('fa-2x'),
+            ico.addClass('fa-lg');
         } else {
-            nav.removeClass('scrolled');
+            nav.removeClass('scrolled'),
+            ico.removeClass('fa-lg'),
+            ico.addClass('fa-2x');
         }
 
     });

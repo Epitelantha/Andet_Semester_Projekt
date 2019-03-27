@@ -8,6 +8,9 @@
     margin: auto;
     font: bold 16px sans-serif;
     z-index: 1;
+    transition: padding 0.5s ease;
+    padding: 40px 0;
+    flex-wrap: wrap;
 }
 
 .navbar a {
@@ -19,13 +22,6 @@
     border-right: 1px solid #bbb;
     font-family : Arial, sans-serif;
 	font-size: 16px;
-}
-
-.navbar {
-    transition: padding 0.5s ease;
-    padding: 40px 0;
-    margin: auto;
-    flex-wrap: wrap;
 }
 
 .navbar.scrolled{
