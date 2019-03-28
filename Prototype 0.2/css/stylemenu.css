@@ -5,7 +5,7 @@
     position: sticky;    
     top: 0;
     left: 0;
-    margin: auto;
+    margin: 0;
     font: bold 16px sans-serif;
     z-index: 1;
     transition: padding 0.5s ease;

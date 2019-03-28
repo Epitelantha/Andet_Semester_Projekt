@@ -24,7 +24,7 @@ $(function () {
     bckground.height(function(){
         
         windowHeight = win.innerHeight();
-        bckground.css('height', windowHeight - 144);
+        bckground.css('height', windowHeight - 134);
         
     });
     
