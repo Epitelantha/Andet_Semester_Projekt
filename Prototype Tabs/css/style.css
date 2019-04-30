@@ -59,6 +59,13 @@ body {
   padding-top: 102px;
 }
 
+.row2{
+    background: rgba(155,62,55,0.82);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
 
 /*-----------------------------------
 		TEKST
