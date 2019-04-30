@@ -46,7 +46,7 @@ body {
 		TEKST
 ------------------------------------*/
 
-/* Titler */
+/* Titles */
 
 h1 {
     color: #5a5b5b;
@@ -274,7 +274,7 @@ h1 {
     margin-bottom: 5px;
 }
 
-/* Dette er en del af koden der gør footeren responsiv */
+/* Dette gør footeren responsiv */
 
 @media (max-width: 880px) {
 
@@ -298,7 +298,7 @@ h1 {
 }
 
 /*-----------------------------------
-	Hjælpeklasser
+	Helper classes
 ------------------------------------*/
 
 .noPadding {
@@ -315,7 +315,7 @@ h1 {
 
 
 /*-----------------------------------
-	Responsivt
+	Media querries
 ------------------------------------*/
 
 /* On smaller screens */

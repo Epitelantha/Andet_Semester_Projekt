@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prototype Kontakt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/stylemenu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="lib/easeljs-NEXT.combined.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body onload="init()" style="margin: 5px">
+    
+    <div class="navbar">
+        <a class="list" href="home.html">Home</a>
+        <a class="list" href="kalender.html">Kalender</a>
+        <a class="active" href="kontakt.html">Kontakt</a>
+        <div class="dropdown">
+            <button class="dropbtn">Login
+            </button>
+            <div class="dropdown-content">
+                <form>
+                    <p>Brugernavn:</p>
+                    <input id="brugernavn" type="text" value="">
+                    <br>
+                    <p>Adgangskode</p>
+                    <input id="adgangskode" type="password" value="">
+                    <br>
+                    <input id="login" type="button" value="Login">
+                    <a href="nybruger.html">Ny Bruger?</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <h1>Kontaktinformationer</h1>
+
+    <p>De kan komme i kontakt med os her:<br></p>
+    <ul class="contact">
+        <li class="contactinside">Telefon: 46401434</li>
+        <li class="contactinside">Studiemail: horol18@student.sdu.dk</li>
+    </ul>
+
+</body>
+
+</html>
