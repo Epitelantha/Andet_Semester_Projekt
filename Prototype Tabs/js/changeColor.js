@@ -1,6 +1,14 @@
+var mainColor = '#0000ff';
+var secondaryColor = '#ff5623';
+var backgroundColor = '#ff4323';
+
 $(function () {
 
-    $('.active').css('background-color', '#5383d3'),
-    $('.active:hover').css('background-color', '#9393f9'),
-    $('.dropdown:hover').css('background-color', '#5383d3');
+    $('.header-user-dropdown .header-limiter h1 span').css('color', mainColor),
+        $('.header-user-dropdown .header-limiter .header-user-menu').css('background-color', secondaryColor),
+        $('.footer-klasse .footer-center i').css('background-color', secondaryColor),
+        $('.footer-klasse .footer-ikoner a').css('background-color', secondaryColor),
+        $('.header-user-dropdown').css('background', backgroundColor),
+        $('.footer-klasse').css('background-color', backgroundColor);
+
 });
