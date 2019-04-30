@@ -42,6 +42,23 @@ body {
     height: 600px;
 }
 
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
 
 /*-----------------------------------
 		TEKST
@@ -94,8 +111,8 @@ h1 {
 }
 
 .linje {
-    display:inline-block;
-    float:none;
+    display: inline-block;
+    float: none;
     top: 0px;
     vertical-align: top;
     margin: 0px 60px 0px 60px;
@@ -355,11 +372,11 @@ h1 {
         text-align: center;
         padding: 5px;
     }
-    
+
     .linje {
-    display:block;
-    position:relative;
-}
+        display: block;
+        position: relative;
+    }
 
 }
 
