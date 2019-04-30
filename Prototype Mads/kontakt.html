@@ -81,7 +81,7 @@
 
             var circle = new createjs.Shape();
             circle.graphics.beginStroke('#000');
-            circle.graphics.beginLinearGradientFill(["#00FF00","#8C1515"], [0,0.1,5, 10], 0, 0, 0, 300)
+            circle.graphics.beginLinearGradientFill(["#9400D3","#4B0082","#0000FF","#00FF00","#FFFF00","#FF7F00","#FF0000"], [0.02,0.03,0.05,0.08,0.09,0.14,0.15], 0, 0, 0, 300)
             circle.graphics.drawCircle(22, 22, 20);
             circle.x= window.innerWidth-44;
             circle.y= 22;
@@ -89,7 +89,7 @@
             circle.regY = 22;
             stage.addChild(circle);
             
-            createjs.Tween.get(circle).to({rotation:10000000},600000);
+            createjs.Tween.get(circle).to({rotation:400000},600000);
         }
     </script>
 
