@@ -1,6 +1,6 @@
-var mainColor = '#0000ff';
+var mainColor = '#ff0000';
 var secondaryColor = '#ff5623';
-var backgroundColor = '#ff4323';
+var backgroundColor = '#442c2f';
 
 $(function () {
 
