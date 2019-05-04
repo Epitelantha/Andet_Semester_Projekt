@@ -2,17 +2,20 @@
 <html>
 
 <head>
-    <title>Prototype Kontakt</title>
+    
+    <title>Prototype Hjem</title>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/stylemenu.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerUserDropdown.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
 
     <!-- Create.js -->
     <script src="lib/easeljs-NEXT.combined.js"></script>
@@ -24,28 +27,32 @@
 <body style="margin: 0px">
 
     <!--  Navigation Bar -->
-    <div class="navbar">
-        <a href="home.html">Phoenix Klip</a>
-        <a class="list" href="home.html"><i class="fa fa-home fa-lg"></i>&nbsp;&nbsp;Home</a>
-        <a class="list" href="kalender.html"><i class="fa fa-calendar fa-lg"></i>&nbsp;&nbsp;Kalender</a>
-        <a class="active" href="kontakt.html"><i class="fa fa-phone fa-lg"></i>&nbsp;&nbsp;Kontakt</a>
-        <div class="dropdown">
-            <button class="dropbtn"><i class="fa fa-user fa-lg"></i>&nbsp;&nbsp;Bruger
-            </button>
-            <div class="dropdown-content">
-                <form>
-                    <p>Brugernavn:</p>
-                    <input id="brugernavn" type="text" value="">
-                    <br>
-                    <p>Adgangskode</p>
-                    <input id="adgangskode" type="password" value="">
-                    <br>
-                    <a id="login" href="#" value="Login">Login</a>
-                    <a href="nybruger.html">Ny Bruger?</a>
-                </form>
+    <header class="header-user-dropdown" id="myHeader">
+
+        <div class="header-limiter">
+            <h1><a href="#">Pheonix<span>Klip</span></a></h1>
+
+            <nav>
+                <a href="home.html">Hjem</a>
+                <a href="kalender.html">Kalender</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="https://www.politiken.dk">Nyheder <span class="header-new-feature">nyt</span></a>
+            </nav>
+
+
+            <div class="header-user-menu">
+                <img src="img/2.jpg" alt="User Image" />
+
+                <ul>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Payments</a></li>
+                    <li><a href="homeLoggedOut.html" class="highlight">Logout</a></li>
+                </ul>
             </div>
+
         </div>
-    </div>
+
+    </header>
 
     <h1>Kontaktinformationer</h1>
 
@@ -102,7 +109,38 @@
 
     <!-- Scripts -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/script2.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/changeColor.js"></script>
+    <script src="js/slideshowScript.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            var userMenu = $('.header-user-dropdown .header-user-menu');
+
+            userMenu.on('touchend', function(e) {
+
+                userMenu.addClass('show');
+
+                e.preventDefault();
+                e.stopPropagation();
+
+            });
+
+            // This code makes the user dropdown work on mobile devices
+
+            $(document).on('touchend', function(e) {
+
+                // If the page is touched anywhere outside the user menu, close it
+                userMenu.removeClass('show');
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
