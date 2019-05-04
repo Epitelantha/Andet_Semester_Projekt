@@ -2,8 +2,18 @@ var mainColor = '#ff0000';
 var secondaryColor = '#ff5623';
 var backgroundColor = '#442c2f';
 
+var titleOne = 'Pheonix';
+var titleTwo = 'Klip';
+
 $(function () {
     
+    if (localStorage.getItem("titlePartOne") == null) {
+        localStorage.setItem("titlePartOne", titleOne);
+    }
+    if (localStorage.getItem("titlePartTwo") == null) {
+        localStorage.setItem("titlePartTwo", titleTwo);
+    }
+
     if (localStorage.getItem("mainColor") != null) {
         mainColor = localStorage.getItem("mainColor");
         console.log(mainColor);
@@ -14,7 +24,14 @@ $(function () {
     if (localStorage.getItem("backgroundColor") != null) {
         backgroundColor = localStorage.getItem("backgroundColor");
     }
-    
+
+    if (localStorage.getItem("titlePartOne") != null) {
+        titleOne = localStorage.getItem("titlePartOne");
+    }
+    if (localStorage.getItem("titlePartTwo") != null) {
+        titleTwo = localStorage.getItem("titlePartTwo");
+    }
+
 
     if (localStorage.getItem("mainColor") == null) {
         localStorage.setItem("mainColor", mainColor);
@@ -25,8 +42,7 @@ $(function () {
     if (localStorage.getItem("backgroundColor") == null) {
         localStorage.setItem("backgroundColor", backgroundColor);
     }
-    
-    
+
 
     $('.header-user-dropdown .header-limiter h1 span').css('color', mainColor),
         $('.header-user-dropdown .header-limiter .header-user-menu').css('background-color', secondaryColor),
@@ -34,5 +50,4 @@ $(function () {
         $('.footer-klasse .footer-ikoner a').css('background-color', secondaryColor),
         $('.header-user-dropdown').css('background', backgroundColor),
         $('.footer-klasse').css('background-color', backgroundColor);
-
 });
