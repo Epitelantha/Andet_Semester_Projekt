@@ -6,7 +6,7 @@ var titleOne = 'Pheonix';
 var titleTwo = 'Klip';
 
 $(function () {
-    
+
     if (localStorage.getItem("titlePartOne") == null) {
         localStorage.setItem("titlePartOne", titleOne);
     }
@@ -41,13 +41,15 @@ $(function () {
     }
     if (localStorage.getItem("backgroundColor") == null) {
         localStorage.setItem("backgroundColor", backgroundColor);
-    }
+    }    
 
-
+    $('#titlePartOne').html(titleOne + "<span>" + titleTwo + "</span>");
+    
     $('.header-user-dropdown .header-limiter h1 span').css('color', mainColor),
         $('.header-user-dropdown .header-limiter .header-user-menu').css('background-color', secondaryColor),
         $('.footer-klasse .footer-center i').css('background-color', secondaryColor),
         $('.footer-klasse .footer-ikoner a').css('background-color', secondaryColor),
         $('.header-user-dropdown').css('background', backgroundColor),
         $('.footer-klasse').css('background-color', backgroundColor);
+    
 });
