@@ -1,0 +1,100 @@
+/* Float four columns side by side */
+.colorColumn {
+    float: left;
+    width: 15%;
+    padding: 0 10px;
+    margin: 10px;
+}
+
+
+/* Remove extra left and right margins, due to padding */
+.colorRow {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.colorRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .colorColumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.colorCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.color1 {
+    /* Secondary Color */
+    background-color: #ff5623;
+}
+
+.color1 div {
+    /*Background Color */
+    background-color: #442c2f;
+}
+
+.color1 h3 {
+    /* Main Color */
+    color: #ff0000;
+}
+
+.color2 {
+    background-color: #548ce5;
+}
+
+.color2 div {
+    background-color: #0d3942;
+}
+
+.color2 h3 {
+    color: #003bff;
+}
+
+.color3 {
+    background-color: #36bc36;
+}
+
+.color3 div {
+    background-color: #55775f;
+}
+
+.color3 h3 {
+    color: #00ff4a;
+}
+
+.color4 {
+    background-color: #bab134;
+}
+
+.color4 div {
+    background-color: #443416;
+}
+
+.color4 h3 {
+    color: #ffa500;
+}
+
+.color5 {
+    background-color: #ac2eba;
+}
+
+.color5 div {
+    background-color: #522956;
+}
+
+.color5 h3 {
+    color: #d19cd6;
+}
