@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    
+
     <title>Prototype Hjem</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/headerUserDropdown.css">
+    <link rel="stylesheet" href="css/colorCards.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -30,7 +31,7 @@
     <header class="header-user-dropdown" id="myHeader">
 
         <div class="header-limiter">
-            <h1><a href="#">Pheonix<span>Klip</span></a></h1>
+            <h1><a href="#" id="titlePartOne">Pheonix<span id="titlePartTwo">Klip</span></a></h1>
 
             <nav>
                 <a href="home.html">Hjem</a>
@@ -55,17 +56,61 @@
     </header>
 
     <!-- Main Page -->
-    <div nybruger>
+    <div class="container-fluid noPadding ">
         <h1>My Account: Fagatron</h1>
         <center>
             <img src="img/lordmads.jpg" alt="User Image" height="250" width="160" />
         </center>
-        
+
         <br>
         <input id="logout" type="submit" value="Logout">
         <br>
         <br>
         <a href="home.html">Hjem</a>
+        
+        <form id="titelChangeForm">
+            Titel 1<br>
+            <input id="titleOne">
+            <br>
+
+            Titel 2<br>
+            <input id="titleTwo">
+            <br>
+
+            <input id="titleChange" type="button" value="Skift Titel">
+        </form>
+
+        <div class="colorRow">
+            <button class="colorColumn color1">
+                <div class="colorCard">
+                    <h3>Color 1</h3>
+                </div>
+            </button>
+
+            <button class="colorColumn color2">
+                <div class="colorCard">
+                    <h3>Color 2</h3>
+                </div>
+            </button>
+
+            <button class="colorColumn color3">
+                <div class="colorCard">
+                    <h3>Color 3</h3>
+                </div>
+            </button>
+
+            <button class="colorColumn color4">
+                <div class="colorCard">
+                    <h3>Color 4</h3>
+                </div>
+            </button>
+            
+            <button class="colorColumn color5">
+                <div class="colorCard">
+                    <h3>Color 5</h3>
+                </div>
+            </button>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -116,11 +161,11 @@
     <!-- Scripts -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/script2.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/access.js"></script>
     <script src="js/changeColor.js"></script>
-    <script src="js/slideshowScript.js"></script>
+    <script src="js/setColor.js"></script>
+    
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <script>
@@ -147,10 +192,7 @@
             });
 
         });
-
     </script>
-    
 
-</body>
 
-</html>
+</body></html>
