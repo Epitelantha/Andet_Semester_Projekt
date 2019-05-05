@@ -11,14 +11,6 @@ body {
     border: 0;
 }
 
-.contact {
-    width: 375px;
-    border: 15px solid #333333;
-    margin: auto;
-    width: 50%;
-    text-align: center;
-}
-
 .contactinside {
     font-family: "Arial Black"
 }
@@ -28,6 +20,11 @@ body {
     padding;
     10px 10px;
     text-align: center;
+}
+
+.littlePad {
+    margin-left: 20px;
+    margin-top: -80px;
 }
 
 /* MAIN BILLEDE */

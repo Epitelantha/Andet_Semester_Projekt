@@ -9,8 +9,8 @@
 
 /* Remove extra left and right margins, due to padding */
 .colorRow {
-    margin: 0 -5px;
     align-items: center;
+    margin-left: -10px;
 }
 
 /* Clear floats after the columns */

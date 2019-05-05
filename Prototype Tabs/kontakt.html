@@ -11,6 +11,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/headerUserDropdown.css">
+    <link rel="stylesheet" href="css/kontaktStyle.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -54,14 +55,50 @@
 
     </header>
 
-    <h1>Kontaktinformationer</h1>
+    <div class="pictureFrame">
+        <br>
+        <img src="img/dresserShort.jpg">
+    </div>
 
-    <p>De kan komme i kontakt med os her:<br></p>
-    <ul class="contact">
-        <li class="contactinside">Telefon: 46401434</li>
-        <li class="contactinside">Studiemail: horol18@student.sdu.dk</li>
-    </ul>
+    <h1 class="kontakth1">Kontaktinformationer</h1>
 
+    <div class="containerKontakt">
+        <form>
+
+            <label for="fname">Navn</label>
+            <input type="text" id="fname" name="firstname" placeholder="Dit fulde navn">
+
+            <label for="lname">Mail</label>
+            <input type="text" id="lname" name="lastname" placeholder="eksempel@eksempel.dk">
+
+            <label for="subject">Besked</label>
+            <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
+
+            <input type="submit" value="Send">
+
+        </form>
+    </div>
+    
+    <div class="kontaktDiv">
+        <p>De kan komme i kontakt med os her:<br><br></p>
+
+        <div>
+            <p> <i class="fa fa-map-marker"></i><span> 21 Opfundetgade</span> Odense, Danmark</p>
+        </div>
+        <div>
+            <p><i class="fa fa-phone"></i>
+                +45 12345678</p>
+        </div>
+        <div class="footer-ikoner">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Epitelantha/Andet_Semester_Projekt" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
     <canvas id="canvas" width="300" height="45" style="border: black solid 0px"></canvas>
 
     <script>

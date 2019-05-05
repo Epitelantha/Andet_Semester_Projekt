@@ -5,20 +5,28 @@ $(document).ready (function()
     $("#login").click(function()
 
        {
-        // Dette for værdien som er skrevet i username til at komme op i console
-          brugernavnInput = $("#brugernavn").val();
-          adgangskodeInput = $("#adgangskode").val();
-
-
-           console.log(brugernavnInput);
-
-
-          if (localStorage.getItem("brugernavn") == brugernavnInput && localStorage.getItem("adgangskode") == adgangskodeInput)
+        
+          userNameInput = $("#brugernavn").val();
+          passwordInput = $("#adgangskode").val();
+        
+        var userNameCheck = localStorage.getItem("myUserName");
+        var passwordCheck = localStorage.getItem("myPassword");
+        console.log(userNameCheck);
+        console.log(passwordCheck);
+        
+        console.log(userNameInput);
+        console.log(passwordInput);
+        
+        console.log(userNameCheck.indexOf(userNameInput));
+        
+        userNameCheck = JSON.parse(userNameCheck);
+        passwordCheck = JSON.parse(passwordCheck);
+        
+          if (userNameCheck.includes(userNameInput) && passwordCheck.includes(passwordInput) && userNameInput != "" && passwordInput != "" && userNameCheck.indexOf(userNameInput) == passwordCheck.indexOf(passwordInput))
           { 
-              // localStorage er der hvor ting bliver gemt og kan bruges senere, såsom brugernavne og koder//
-
+              
             localStorage.setItem("access", "true");
-            // Denne linje sender sig over til index.html siden/ 
+             
             $(location).attr("href", "account.html");
           }
 
@@ -30,7 +38,7 @@ $(document).ready (function()
               
 
              // Dette får det login til at ryste
-            $("#loginForm").effect("shake");
+            //$("#loginForm").effect("shake");
 
           }
        });

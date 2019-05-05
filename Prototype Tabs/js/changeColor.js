@@ -52,4 +52,8 @@ $(function () {
         $('.header-user-dropdown').css('background', backgroundColor),
         $('.footer-klasse').css('background-color', backgroundColor);
     
+    $('.kontaktDiv').css('border', '2px solid ' + secondaryColor);
+    $('input[type=submit]').css('background-color', secondaryColor);
+    $('input[type=submit]:hover').css('background-color', secondaryColor);
+    
 });
