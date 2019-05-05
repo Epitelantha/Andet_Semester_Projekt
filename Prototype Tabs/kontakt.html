@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    
+
     <title>Prototype Hjem</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,7 @@
 
 </head>
 
-<body style="margin: 0px">
+<body onload="init()" style="margin: 0px">
 
     <!--  Navigation Bar -->
     <header class="header-user-dropdown" id="myHeader">
@@ -61,6 +61,42 @@
         <li class="contactinside">Telefon: 46401434</li>
         <li class="contactinside">Studiemail: horol18@student.sdu.dk</li>
     </ul>
+
+    <canvas id="canvas" width="300" height="45" style="border: black solid 0px"></canvas>
+
+    <script>
+        var stage;
+
+        function init() {
+            stage = new createjs.Stage(document.getElementById('canvas'));
+            canvas.width = window.innerWidth;
+            createjs.Ticker.addEventListener("tick", handleTick);
+            createjs.Ticker.setFPS(60);
+            start();
+
+        }
+
+        function handleTick(e) {
+            stage.update();
+        }
+
+        function start() {
+
+            var circle = new createjs.Shape();
+            circle.graphics.beginStroke('#000');
+            circle.graphics.beginLinearGradientFill(["#9400D3", "#4B0082", "#0000FF", "#00FF00", "#FFFF00", "#FF7F00", "#FF0000"], [0.02, 0.03, 0.05, 0.08, 0.09, 0.14, 0.15], 0, 0, 0, 300)
+            circle.graphics.drawCircle(22, 22, 20);
+            circle.x = window.innerWidth - 44;
+            circle.y = 22;
+            circle.regX = 22;
+            circle.regY = 22;
+            stage.addChild(circle);
+
+            createjs.Tween.get(circle).to({
+                rotation: 400000
+            }, 600000);
+        }
+    </script>
 
     <!-- Footer -->
     <footer class="footer-klasse">
@@ -137,9 +173,6 @@
             });
 
         });
-
     </script>
 
-</body>
-
-</html>
+</body></html>
