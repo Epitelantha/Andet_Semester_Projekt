@@ -9,6 +9,8 @@ $(document).ready (function()
           userNameInput = $("#brugernavn").val();
           passwordInput = $("#adgangskode").val();
         
+        localStorage.setItem("accountName", userNameInput);
+        
         var userNameCheck = localStorage.getItem("myUserName");
         var passwordCheck = localStorage.getItem("myPassword");
         console.log(userNameCheck);

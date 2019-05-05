@@ -47,7 +47,7 @@
                 <ul>
                     <li><a href="#">Settings</a></li>
                     <li><a href="#">Payments</a></li>
-                    <li><a href="homeLoggedOut.html" class="highlight">Logout</a></li>
+                    <li><input id="logout" type="submit" value="Logout"></li>
                 </ul>
             </div>
 
@@ -59,13 +59,13 @@
     <div class="container-fluid noPadding ">
         <div class="littlePad">
 
-            <h1>My Account: Fagatron</h1>
-            <center>
-                <img src="img/lordmads.jpg" alt="User Image" height="250" width="160" />
-            </center>
+            <h1 id="accountName"></h1>
+            <div>
+                <img src="img/defaultProfilePic.jpg" alt="User Image" height="200" width="180" />
+            </div>
 
             <br>
-            <input id="logout" type="submit" value="Logout">
+            <input id="logout2" type="submit" value="Logout">
             <br>
             <br>
             <a href="home.html">Hjem</a><br><br>
@@ -164,8 +164,10 @@
     <!-- Scripts -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/script2.js"></script>
-    <script src="js/logout.js"></script>
+    
     <script src="js/access.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/account.js"></script>
     <script src="js/changeColor.js"></script>
     <script src="js/setColor.js"></script>
 

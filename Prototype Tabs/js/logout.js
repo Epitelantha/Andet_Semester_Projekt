@@ -1,12 +1,21 @@
-$(document).ready (function(){
+$(document).ready(function () {
 
 
-$("#logout").click(function(){
+    $("#logout").click(function () {
 
-    localStorage.setItem("access", "false");
+        localStorage.setItem("access", "false");
 
-$(location).attr("href", "login.html");
+        $(location).attr("href", "login.html");
 
 
- });
+    });
+
+    $("#logout2").click(function () {
+
+        localStorage.setItem("access", "false");
+
+        $(location).attr("href", "login.html");
+
+
+    });
 });
