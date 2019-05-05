@@ -5,6 +5,7 @@
 	height: 80px;
 	color: #ffffff;
 	box-sizing: border-box;
+    z-index: 3;
 }
 
 .header-user-dropdown .header-limiter {
