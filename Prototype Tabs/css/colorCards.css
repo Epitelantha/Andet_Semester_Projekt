@@ -1,9 +1,10 @@
 /* Float four columns side by side */
 .colorColumn {
-    float: left;
-    width: 15%;
+    float: right;
+    width: 50%;
     padding: 0 10px;
     margin: 10px;
+    margin-top: 0px;
 }
 
 
@@ -11,6 +12,9 @@
 .colorRow {
     align-items: center;
     margin-left: -10px;
+    float: right;
+    margin-top: 150px;
+    margin-right: 70px;
 }
 
 /* Clear floats after the columns */

@@ -56,21 +56,22 @@
     </header>
 
     <!-- Main Page -->
-    <div class="container-fluid noPadding ">
+    <div class="container-fluid noPadding">
         <div class="littlePad">
+            <div class="account">
 
-            <h1 id="accountName"></h1>
-            <div>
-                <img src="img/defaultProfilePic.jpg" alt="User Image" height="200" width="180" />
-            </div>
+                <h1 id="accountName"></h1>
+                <div>
+                    <img src="img/defaultProfilePic.jpg" alt="User Image" height="200" width="180" />
+                </div>
 
-            <br>
-            <input id="logout2" type="submit" value="Logout">
-            <br>
-            <br>
-            <a href="home.html">Hjem</a><br><br>
-
-            <form id="titelChangeForm">
+                <br>
+                <input id="logout2" type="button" value="Logout">
+                <br>
+                <br>
+                <a href="home.html">Hjem</a><br><br>
+                
+                <form id="titelChangeForm">
                 Titel 1<br>
                 <input id="titleOne">
                 <br><br>
@@ -81,6 +82,9 @@
 
                 <input id="titleChange" type="button" value="Skift Titel">
             </form>
+            </div>
+
+            
 
             <div class="colorRow">
                 <button class="colorColumn color1">
@@ -164,7 +168,7 @@
     <!-- Scripts -->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="js/script2.js"></script>
-    
+
     <script src="js/access.js"></script>
     <script src="js/logout.js"></script>
     <script src="js/account.js"></script>
