@@ -52,6 +52,24 @@
 	line-height: 1;
 }
 
+.header-user-dropdown .header-limiter .nav2{
+	font:16px Arial, Helvetica, sans-serif;
+	line-height: 40px;
+	float: right;
+	margin: 0 0 0 60px;
+	padding: 0;
+}
+
+.header-user-dropdown .header-limiter .nav2 a{
+	font-size: 14px;
+	display: inline-block;
+	padding: 0 12px;
+	opacity: 0.9;
+	position: relative;
+	text-decoration:none;
+	line-height: 1;
+}
+
 .header-user-dropdown .header-limiter nav a:hover {
 	opacity: 1;
 }
@@ -153,8 +171,5 @@
 
 @media all and (max-width: 600px) {
 
-	.header-user-dropdown .header-limiter nav {
-		display: none;
-	}
 
 }
