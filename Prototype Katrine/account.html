@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Prototype Hjem</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerUserDropdown.css">
+    <link rel="stylesheet" href="css/colorCards.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+    <!-- Create.js -->
+    <script src="lib/easeljs-NEXT.combined.js"></script>
+    <script src="lib/preloadjs-0.4.1.min.js"></script>
+    <script src="lib/tweenjs-0.5.1.min.js"></script>
+
+</head>
+
+<body style="margin: 0px">
+
+    <!--  Navigation Bar -->
+    <header class="header-user-dropdown" id="myHeader">
+
+        <div class="header-limiter">
+            <h1><a href="#" id="titlePartOne">Pheonix<span id="titlePartTwo">Klip</span></a></h1>
+
+            <nav>
+                <a href="home.html">Hjem</a>
+                <a href="kalender.html">Kalender</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+
+            <nav class="nav2">
+                <a href="logout.html">Log ud</a>
+                <a href="account.html">Bruger</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- Main Page -->
+    <div class="container-fluid noPadding">
+        <div class="littlePad">
+            <div class="account">
+
+                <h1 id="accountName"></h1>
+                <div>
+                    <img src="img/defaultProfilePic.jpg" alt="User Image" height="200" width="180" />
+                </div>
+
+                <br>
+                <input id="logout2" type="button" value="Logout">
+                <br>
+                <br>
+                <a href="home.html">Hjem</a><br><br>
+                
+                <form id="titelChangeForm">
+                Titel 1<br>
+                <input id="titleOne">
+                <br><br>
+
+                Titel 2<br>
+                <input id="titleTwo">
+                <br><br>
+
+                <input id="titleChange" type="button" value="Skift Titel">
+            </form>
+            </div>
+
+            
+
+            <div class="colorRow">
+                <button class="colorColumn color1">
+                    <div class="colorCard">
+                        <h3>Color 1</h3>
+                    </div>
+                </button>
+
+                <button class="colorColumn color2">
+                    <div class="colorCard">
+                        <h3>Color 2</h3>
+                    </div>
+                </button>
+
+                <button class="colorColumn color3">
+                    <div class="colorCard">
+                        <h3>Color 3</h3>
+                    </div>
+                </button>
+
+                <button class="colorColumn color4">
+                    <div class="colorCard">
+                        <h3>Color 4</h3>
+                    </div>
+                </button>
+
+                <button class="colorColumn color5">
+                    <div class="colorCard">
+                        <h3>Color 5</h3>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-klasse">
+        <!-- Venstre -->
+        <div class="footer-venstre">
+            <img src="img/logo.png" alt="Logo" width="60" height="60">
+            <p class="footer-links">
+                <a href="home.html">Hjem</a>
+                ·
+                <a href="kalender.html">Kalender</a>
+                ·
+                <a href="kontakt.html">Kontakt</a>
+            </p>
+            <p class="footer-navn">Phoenix Klip &copy; 2019</p>
+        </div>
+        <!-- Center -->
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Ny Vestergade 7</span> Odense, Danmark</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+45 28894776</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:pheonixklip@gmail.dk">pheonixklip@gmail.dk</a></p>
+            </div>
+        </div>
+        <!-- Højre -->
+        <div class="footer-hoejre">
+            <p class="footer-om">
+                <span>Om os</span>
+                Vi er el lille frisør i Odense <br>
+                Vi klipper begge køn til realistiske priser
+            </p>
+            <div class="footer-ikoner">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/Epitelantha/Andet_Semester_Projekt" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/script2.js"></script>
+
+    <script src="js/access.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/account.js"></script>
+    <script src="js/changeColor.js"></script>
+    <script src="js/setColor.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            var userMenu = $('.header-user-dropdown .header-user-menu');
+
+            userMenu.on('touchend', function(e) {
+
+                userMenu.addClass('show');
+
+                e.preventDefault();
+                e.stopPropagation();
+
+            });
+
+            // This code makes the user dropdown work on mobile devices
+
+            $(document).on('touchend', function(e) {
+
+                // If the page is touched anywhere outside the user menu, close it
+                userMenu.removeClass('show');
+
+            });
+
+        });
+    </script>
+
+
+</body></html>
