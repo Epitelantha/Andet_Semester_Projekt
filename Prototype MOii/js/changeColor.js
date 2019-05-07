@@ -1,5 +1,5 @@
-var mainColor = '#ff0000';
-var secondaryColor = '#ff5623';
+var mainColor = '#00ff4a';
+var secondaryColor = '#36bc36';
 var backgroundColor = '#228b22';
 
 var titleOne = 'Frisør';
