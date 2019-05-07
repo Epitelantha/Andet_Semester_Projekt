@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Logout</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerUserDropdown.css">
+
+    <!-- Create.js -->
+    <script src="lib/easeljs-NEXT.combined.js"></script>
+    <script src="lib/preloadjs-0.4.1.min.js"></script>
+    <script src="lib/tweenjs-0.5.1.min.js"></script>
+
+</head>
+
+<body class="noMargin noPadding">
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            localStorage.setItem("access", "false");
+
+            $(location).attr("href", "homeLoggedOut.html");
+
+        });
+    </script>
+
+</body></html>

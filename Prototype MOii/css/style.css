@@ -1,0 +1,416 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    padding-top: 0px;
+    overflow-x: hidden;
+}
+
+#canvas {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.contactinside {
+    font-family: "Arial Black"
+}
+
+#fylde {
+    display: block;
+    padding;
+    10px 10px;
+    text-align: center;
+}
+
+.littlePad {
+    margin-left: 20px;
+    margin-top: -80px;
+}
+
+/* MAIN BILLEDE */
+
+.headpicture {
+    background: url(../img/dresser.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.5s ease;
+    margin: 0px;
+    width: 100%;
+    height: 600px;
+}
+
+/* Page content */
+.content {
+    padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.row2 {
+    background: rgba(155, 62, 55, 0.82);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+
+.log {
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 25%;
+    margin: 0px auto;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.log h1 {
+    margin-top: -50px;
+}
+
+.account {
+    float: left;
+    margin-left: 60px;
+}
+
+
+/*-----------------------------------
+		TEKST
+------------------------------------*/
+
+/* Titles */
+
+h1 {
+    color: #5a5b5b;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 150px;
+    font-family: Cabin, sans-serif;
+}
+
+/* Paragraphs */
+
+.textStyle {
+    color: #989999;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 80px auto 0 auto;
+}
+
+.textStyle a {
+    text-decoration: underline;
+}
+
+.textStyle a:hover {
+    text-decoration: none;
+}
+
+
+
+/*-----------------------------------
+	Hyperlinks og info
+------------------------------------*/
+
+/* Container */
+
+.container-fluid {
+    margin: -5px;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.latestProjects {
+    margin: 40px auto 20px auto;
+    text-align: center;
+}
+
+.linje {
+    display: inline-block;
+    float: none;
+    top: 0px;
+    vertical-align: top;
+    margin: 0px 60px 0px 60px;
+}
+
+.latestProjects p {
+    font-size: 16px;
+    color: #757879;
+    width: 260px;
+    height: 150px;
+    text-align: left;
+    margin: 13px auto 60px auto;
+}
+
+.latestProjects p a {
+    font-size: 12px;
+    display: block;
+    width: 260px;
+    white-space: nowrap;
+    margin-top: 6px;
+}
+
+.latestProjects img {
+    top: 0;
+    width: 260px;
+    height: 260px;
+}
+
+/*-----------------------------------
+		FOOTER
+------------------------------------*/
+
+.footer-klasse {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+
+    padding: 55px 50px;
+    margin-top: 80px;
+}
+
+.footer-klasse .footer-venstre,
+.footer-klasse .footer-center,
+.footer-klasse .footer-hoejre {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer venstre */
+
+.footer-klasse .footer-venstre {
+    width: 40%;
+}
+
+/* Logo */
+
+.footer-klasse h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-klasse h3 span {
+    color: #5383d3;
+}
+
+/* Footer links */
+
+.footer-klasse .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-klasse .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-klasse .footer-navn {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-klasse .footer-center {
+    width: 35%;
+}
+
+.footer-klasse .footer-center i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-klasse .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-klasse .footer-center p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-klasse .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-klasse .footer-center p a {
+    color: #5383d3;
+    text-decoration: none;
+    ;
+}
+
+
+/* Footer Højre */
+
+.footer-klasse .footer-hoejre {
+    width: 20%;
+}
+
+.footer-klasse .footer-om {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-klasse .footer-om span {
+    display: block;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-klasse .footer-ikoner {
+    margin-top: 25px;
+}
+
+.footer-klasse .footer-ikoner a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* Dette gør footeren responsiv */
+
+@media (max-width: 880px) {
+
+    .footer-klasse {
+        font: bold 14px sans-serif;
+    }
+
+    .footer-klasse .footer-venstre,
+    .footer-klasse .footer-center,
+    .footer-klasse .footer-hoejre {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-klasse .footer-center i {
+        margin-left: 0;
+    }
+
+}
+
+/*-----------------------------------
+	Helper classes
+------------------------------------*/
+
+.noPadding {
+    padding: 0;
+}
+
+.noMargin {
+    margin: 0;
+}
+
+.noBorder {
+    border: 0;
+}
+
+
+/*-----------------------------------
+	Media querries
+------------------------------------*/
+
+/* On smaller screens */
+
+@media (max-width: 992px) {
+
+    /* General */
+
+    li {
+        padding-left: 8px;
+    }
+
+    h1 {
+        margin-top: 80px;
+    }
+
+    /* Main picture */
+
+    .headpicture {
+        height: 250px;
+    }
+
+    /* Latest Projects */
+
+    .textStyle {
+        margin-top: 40px;
+    }
+
+    .titleStyle {
+        margin-top: 70px;
+    }
+
+    /* Sharing buttons */
+
+    .responsiveAlign {
+        text-align: center;
+        padding: 5px;
+    }
+
+    .linje {
+        display: block;
+        position: relative;
+    }
+
+}
+
+/* On bigger screens */
+
+@media (min-width: 993px) {
+
+    /* Sharing buttons */
+
+    .responsiveAlign {
+        float: right;
+    }
+}
