@@ -5,9 +5,9 @@ var backgroundColor = '#292c2f;';
 var titleOne = 'Salon';
 var titleTwo = 'Søndergade';
 
-var adresse = 'Opfundetgade 21';
-var teleNummer = '+45 35752946';
-var mail = "eksempel@eksempel.dk";
+var adresse = 'Søndergade 5B';
+var teleNummer = '+45 26359575';
+var mail = "kontakt@salonsoendergade.dk";
 
 $(function () {
 

@@ -5,9 +5,9 @@ var backgroundColor = '#0d3942';
 var titleOne = 'Hu';
 var titleTwo = 'Mac';
 
-var adresse = 'Opfundetgade 21';
-var teleNummer = '+45 35752946';
-var mail = "eksempel@eksempel.dk";
+var adresse = 'Vestergade 94';
+var teleNummer = '+45 70215353';
+var mail = "Businessdk@Humac.dk";
 
 $(function () {
 

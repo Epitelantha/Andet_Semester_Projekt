@@ -5,9 +5,9 @@ var backgroundColor = '#331a00';
 var titleOne = 'Papas';
 var titleTwo = 'Papbar';
 
-var adresse = 'Opfundetgade 21';
-var teleNummer = '+45 35752946';
-var mail = "eksempel@eksempel.dk";
+var adresse = 'Skt. Knuds Kirkestræde 2A';
+var teleNummer = '+45 61705548';
+var mail = "papa@papbar.dk";
 
 $(function () {
 

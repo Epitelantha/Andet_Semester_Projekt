@@ -5,9 +5,9 @@ var backgroundColor = '#228b22';
 var titleOne = 'Frisør';
 var titleTwo = 'Moii';
 
-var adresse = 'Opfundetgade 21';
-var teleNummer = '+45 35752946';
-var mail = "eksempel@eksempel.dk";
+var adresse = 'Mageløs 10';
+var teleNummer = '+45 66146250';
+var mail = "salon@moii.dk";
 
 $(function () {
 
