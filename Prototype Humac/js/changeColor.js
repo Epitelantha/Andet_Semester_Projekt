@@ -1,9 +1,9 @@
-var mainColor = '#ff0000';
-var secondaryColor = '#ff5623';
-var backgroundColor = '#442c2f';
+var mainColor = '#003bff';
+var secondaryColor = '#548ce5';
+var backgroundColor = '#0d3942';
 
-var titleOne = 'Phoenix';
-var titleTwo = 'Klip';
+var titleOne = 'Hu';
+var titleTwo = 'Mac';
 
 var adresse = 'Opfundetgade 21';
 var teleNummer = '+45 35752946';

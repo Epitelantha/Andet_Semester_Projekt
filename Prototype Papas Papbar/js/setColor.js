@@ -1,5 +1,5 @@
-var titlePartOne = 'Pheonix';
-var titlePartTwo = 'Klip';
+var titlePartOne = 'Papas';
+var titlePartTwo = 'Papbar';
 
 var adresse = 'Opfundetgade 21';
 var teleNummer = '+45 35752946';

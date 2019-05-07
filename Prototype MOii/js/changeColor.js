@@ -1,9 +1,9 @@
 var mainColor = '#ff0000';
 var secondaryColor = '#ff5623';
-var backgroundColor = '#442c2f';
+var backgroundColor = '#228b22';
 
-var titleOne = 'Phoenix';
-var titleTwo = 'Klip';
+var titleOne = 'Frisør';
+var titleTwo = 'Moii';
 
 var adresse = 'Opfundetgade 21';
 var teleNummer = '+45 35752946';

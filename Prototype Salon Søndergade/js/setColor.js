@@ -17,7 +17,7 @@ $(document).ready(function () {
     $(".color2").click(function () {
         localStorage.setItem("mainColor", '#003bff');
         localStorage.setItem("secondaryColor", '#548ce5');
-        localStorage.setItem("backgroundColor", '#0d3942');
+        localStorage.setItem("backgroundColor", '#292c2f');
         location.reload();
     });
 

@@ -49,10 +49,10 @@ $(document).ready(function () {
 
         localStorage.setItem("titlePartOne", titlePartOne);
         localStorage.setItem("titlePartTwo", titlePartTwo);
-        
+
         location.reload();
     });
-    
+
     $("#infoChange").click(function () {
 
         adresse = $("#adresse").val();
@@ -62,7 +62,7 @@ $(document).ready(function () {
         localStorage.setItem("adress", adresse);
         localStorage.setItem("teleNummer", teleNummer);
         localStorage.setItem("mail", mail);
-        
+
         location.reload();
     });
 

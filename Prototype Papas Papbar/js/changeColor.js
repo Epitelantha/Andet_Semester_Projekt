@@ -1,9 +1,9 @@
-var mainColor = '#ff0000';
-var secondaryColor = '#ff5623';
-var backgroundColor = '#442c2f';
+var mainColor = '#ffa500';
+var secondaryColor = '#ffa500';
+var backgroundColor = '#331a00';
 
-var titleOne = 'Phoenix';
-var titleTwo = 'Klip';
+var titleOne = 'Papas';
+var titleTwo = 'Papbar';
 
 var adresse = 'Opfundetgade 21';
 var teleNummer = '+45 35752946';

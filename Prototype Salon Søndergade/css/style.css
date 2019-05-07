@@ -3,6 +3,7 @@ body {
     width: 100%;
     padding-top: 0px;
     overflow-x: hidden;
+    background-color: #D3D3D3;
 }
 
 #canvas {

@@ -1,5 +1,5 @@
-var titlePartOne = 'Pheonix';
-var titlePartTwo = 'Klip';
+var titlePartOne = 'Frisør';
+var titlePartTwo = 'MOii';
 
 var adresse = 'Opfundetgade 21';
 var teleNummer = '+45 35752946';
@@ -24,7 +24,7 @@ $(document).ready(function () {
     $(".color3").click(function () {
         localStorage.setItem("mainColor", '#00ff4a');
         localStorage.setItem("secondaryColor", '#36bc36');
-        localStorage.setItem("backgroundColor", '#55775f');
+        localStorage.setItem("backgroundColor", '#228b22');
         location.reload();
     });
 
