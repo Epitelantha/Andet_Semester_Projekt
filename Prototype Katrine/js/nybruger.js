@@ -11,8 +11,14 @@ $("#create").click(function(){
             } else {
                 userNames = new Array();
             }
-
-            userNames.push(userName);
+    if(userNames.includes(userName))
+        {
+            alert("Brugernavn allerede i brug!");
+            
+        }
+    else
+    {
+        userNames.push(userName);
             localStorage.setItem('myUserName', JSON.stringify(userNames));
             
             var userPassword = $('#adgangskode').val();
@@ -31,5 +37,8 @@ $("#create").click(function(){
 
        $(location).attr("href","login.html");
 
+    }
+
+            
  });
 });
