@@ -3,7 +3,6 @@ body {
     width: 100%;
     padding-top: 0px;
     overflow-x: hidden;
-    background-color: #fff3e6;
 }
 
 #canvas {
@@ -54,6 +53,19 @@ body {
 
 .sticky + .content {
     padding-top: 102px;
+}
+
+.arrowContainer {
+    float: left;
+    position: relative;
+    margin-top: -100px;
+    left: 50%;
+}
+
+.arrowCenterer {
+    float: left;
+    position: relative;
+    left: -50%;
 }
 
 .row2 {

@@ -55,6 +55,19 @@ body {
     padding-top: 102px;
 }
 
+.arrowContainer {
+    float: left;
+    position: relative;
+    margin-top: -100px;
+    left: 50%;
+}
+
+.arrowCenterer {
+    float: left;
+    position: relative;
+    left: -50%;
+}
+
 .row2 {
     background: rgba(155, 62, 55, 0.82);
     overflow: hidden;

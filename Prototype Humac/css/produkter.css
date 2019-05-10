@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.produktColumn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.produktRow {
+    margin: 20px;
+}
+
+/* Clear floats after the columns */
+.produktRow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the counter cards */
+.item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    margin: 10px;
+    background-color: #ffffff;
+}
+
+.item img {
+    width: 90%;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+    .produktColumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.knap {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #0d3942;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.knap:hover {
+    background-color: #548ce5;
+}
+
+.knap:active {
+    background-color: #548ce5;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
