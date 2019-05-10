@@ -29,9 +29,12 @@
 
 
 .header-user-dropdown .header-limiter img{
-    height: 5%;
-    width: 5%;
+    height: 50px;
+    width: 50px;
     float: left;
+    margin-top: -7px;
+    margin-right: 10px;
+    
 }
 /* The header links */
 
@@ -62,7 +65,6 @@
 	font:16px Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	float: right;
-	margin: 0 0 0 60px;
 	padding: 0;
 }
 
