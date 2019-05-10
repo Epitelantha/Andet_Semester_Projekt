@@ -27,6 +27,12 @@
 	color: #ff0000;
 }
 
+
+.header-user-dropdown .header-limiter img{
+    height: 5%;
+    width: 5%;
+    float: left;
+}
 /* The header links */
 
 .header-user-dropdown .header-limiter a {
@@ -38,14 +44,14 @@
 	font:16px Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	float: left;
-	margin: 0 0 0 60px;
+	margin: 0 0 0 40px;
 	padding: 0;
 }
 
 .header-user-dropdown .header-limiter nav a{
 	font-size: 14px;
 	display: inline-block;
-	padding: 0 12px;
+	padding: 0 18px;
 	opacity: 0.9;
 	position: relative;
 	text-decoration:none;
