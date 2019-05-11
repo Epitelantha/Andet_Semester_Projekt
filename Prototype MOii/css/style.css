@@ -22,10 +22,7 @@ body {
     text-align: center;
 }
 
-.littlePad {
-    margin-left: 20px;
-    margin-top: -80px;
-}
+
 
 /* MAIN BILLEDE */
 
@@ -88,12 +85,6 @@ body {
 .log h1 {
     margin-top: -50px;
 }
-
-.account {
-    float: left;
-    margin-left: 60px;
-}
-
 
 /*-----------------------------------
 		TEKST

@@ -4,6 +4,6 @@ $(document).ready (function(){
 
     var nameInput = $('#accountName');
     nameInput.html('');
-    nameInput.append("Welcome, " + accountLoginName + "!");
+    nameInput.append("Velkommen, " + accountLoginName + "!");
     
 });

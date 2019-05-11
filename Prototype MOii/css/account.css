@@ -1,0 +1,162 @@
+.padContainer {
+    margin: 40px auto 20px auto;
+    text-align: center;
+}
+
+.accounth1{
+    margin: 40px;
+}
+
+.account {
+    display: inline-block;
+    padding: 10px;
+    background-color: #f1f1f1;
+    top: 0px;
+    vertical-align: top;
+    margin: 0px 60px 0px 60px;
+    width: 25%;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+
+.account h1 {
+    margin-top: 0;
+}
+
+.sideBySide {
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 1px 1px rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Clear floats after the columns */
+.sideBySide:after {
+    content: "";
+    display: table;
+    clear: both;
+    text-align: center;
+    align-items: center;
+}
+
+.change1 {
+    margin-top: 22px;
+}
+
+.colorColumn {
+    width: 35%;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.colorRow {
+    margin-top: auto;
+}
+
+/* Clear floats after the columns */
+.colorRow:after {
+    content: "";
+    display: table;
+    clear: both;
+    text-align: center;
+    align-items: center;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .colorColumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    #titelChangeForm {
+        margin-left: 0px;
+    }
+
+    #infoChangeForm {
+        margin-left: 0px;
+    }
+}
+
+.change {
+    margin-top: 5px
+}
+
+/* Style the counter cards */
+.colorCard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.color1 {
+    /* Secondary Color */
+    background-color: #ff5623;
+}
+
+.color1 div {
+    /*Background Color */
+    background-color: #442c2f;
+}
+
+.color1 h3 {
+    /* Main Color */
+    color: #ff0000;
+}
+
+.color2 {
+    background-color: #548ce5;
+}
+
+.color2 div {
+    background-color: #0d3942;
+}
+
+.color2 h3 {
+    color: #003bff;
+}
+
+.color3 {
+    background-color: #36bc36;
+}
+
+.color3 div {
+    background-color: #228b22;
+}
+
+.color3 h3 {
+    color: #00ff4a;
+}
+
+.color4 {
+    background-color: #bab134;
+}
+
+.color4 div {
+    background-color: #443416;
+}
+
+.color4 h3 {
+    color: #ffa500;
+}
+
+.color5 {
+    background-color: #ac2eba;
+}
+
+.color5 div {
+    background-color: #522956;
+}
+
+.color5 h3 {
+    color: #d19cd6;
+}

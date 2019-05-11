@@ -11,7 +11,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/headerUserDropdown.css">
-    <link rel="stylesheet" href="css/colorCards.css">
+    <link rel="stylesheet" href="css/account.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -53,7 +53,8 @@
 
     <!-- Main Page -->
     <div class="container-fluid noPadding">
-        <div class="littlePad">
+        <div class="padContainer">
+            <h1 class="accounth1">Din side</h1>
             <div class="account">
 
                 <h1 id="accountName"></h1>
@@ -66,69 +67,87 @@
                 <br>
                 <br>
                 <a href="home.html">Hjem</a><br><br>
-
-                <form id="titelChangeForm">
-                    Titel 1<br>
-                    <input id="titleOne">
-                    <br><br>
-
-                    Titel 2<br>
-                    <input id="titleTwo">
-                    <br><br>
-
-                    <input id="titleChange" type="button" value="Skift Titel">
-                    <br><br>
-                </form>
-
-                <form id="infoChangeForm">
-                    Adresse<br>
-                    <input id="adresse">
-                    <br><br>
-
-                    Telefonnummer<br>
-                    <input id="teleNummer">
-                    <br><br>
-                    
-                    Email<br>
-                    <input id="email">
-                    <br><br>
-                    
-                    <input id="infoChange" type="button" value="Skift Kontaktinfo">
-                </form>
             </div>
 
+            <div class="account">
+                <h1 class="accounth1">Kontaktinformation</h1>
+                <div class="sideBySide">
+                    <h3>Vælg titel</h3>
+                    <form id="titelChangeForm">
+                        <div class="change1">
+                            Hvid titel<br>
+                            <input id="titleOne">
+                            <br><br>
 
+                            Farvet titel<br>
+                            <input id="titleTwo">
+                            <br><br>
 
-            <div class="colorRow">
-                <button class="colorColumn color1">
-                    <div class="colorCard">
-                        <h3>Color 1</h3>
-                    </div>
-                </button>
+                            <input id="titleChange" type="button" value="Skift Titel">
+                            <br><br>
+                        </div>
+                        <br><br>
+                        <br>
+                    </form>
+                </div>
 
-                <button class="colorColumn color2">
-                    <div class="colorCard">
-                        <h3>Color 2</h3>
-                    </div>
-                </button>
+                <div class="sideBySide">
+                    <h3>Vælg info</h3>
+                    <form id="infoChangeForm">
+                        <div class="change2">
+                            Adresse<br>
+                            <input id="adresse">
+                            <br><br>
 
-                <button class="colorColumn color3">
-                    <div class="colorCard">
-                        <h3>Color 3</h3>
-                    </div>
-                </button>
+                            Telefonnummer<br>
+                            <input id="teleNummer">
+                            <br><br>
 
-                <button class="colorColumn color4">
-                    <div class="colorCard">
-                        <h3>Color 4</h3>
-                    </div>
-                </button>
+                            Email<br>
+                            <input id="email">
+                            <br><br>
 
-                <button class="colorColumn color5">
-                    <div class="colorCard">
-                        <h3>Color 5</h3>
-                    </div>
-                </button>
+                            <input id="infoChange" type="button" value="Skift Kontaktinfo">
+                            <br><br>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="account">
+                <h1>Vælg hjemmesidens farve</h1>
+                <div class="colorRow">
+                    <button class="colorColumn color1">
+                        <div class="colorCard">
+                            <h3>Rød</h3>
+                        </div>
+                    </button>
+
+                    <button class="colorColumn color2">
+                        <div class="colorCard">
+                            <h3>Blå</h3>
+                        </div>
+                    </button>
+
+                    <button class="colorColumn color3">
+                        <div class="colorCard">
+                            <h3>Grøn</h3>
+                        </div>
+                    </button>
+
+                    <button class="colorColumn color4">
+                        <div class="colorCard">
+                            <h3>Gul</h3>
+                        </div>
+                    </button>
+
+                    <button class="colorColumn color5">
+                        <div class="colorCard">
+                            <h3>Lilla</h3>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
