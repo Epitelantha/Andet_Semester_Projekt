@@ -44,7 +44,7 @@
 }
 
 .header-user-dropdown .header-limiter nav{
-	font:16px Arial, Helvetica, sans-serif;
+	font:15px Arial, Helvetica, sans-serif;
 	line-height: 40px;
 	float: left;
 	margin: 0 0 0 60px;
@@ -52,9 +52,9 @@
 }
 
 .header-user-dropdown .header-limiter nav a{
-	font-size: 14px;
+	font-size: 17px;
 	display: inline-block;
-	padding: 0 12px;
+	padding: 0 18px;
 	opacity: 0.9;
 	position: relative;
 	text-decoration:none;
@@ -69,7 +69,7 @@
 }
 
 .header-user-dropdown .header-limiter .nav2 a{
-	font-size: 14px;
+	font-size: 17px;
 	display: inline-block;
 	padding: 0 12px;
 	opacity: 0.9;
