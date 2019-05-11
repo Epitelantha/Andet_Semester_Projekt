@@ -164,7 +164,7 @@
 }
 
 
-@media all and (max-width: 1060px) {
+@media all and (max-width: 1300px) {
 
     .header-user-dropdown .header-limiter h1 {
         font: normal 35px Cookie, Arial, Helvetica, sans-serif;
@@ -172,16 +172,21 @@
 
     .header-user-dropdown .header-limiter nav {
         font: 15px Arial, Helvetica, sans-serif;
+        margin: 0px 0px 0px 0px;
     }
 
-    .header-user-dropdown .header-limiter nav a {}
+    .header-user-dropdown .header-limiter nav a {
+        margin: 0px 0px 0px 0px;
+    }
 
     .header-user-dropdown .header-limiter .nav2 {
         font: 16px Arial, Helvetica, sans-serif;
+        margin: 0px 0px 0px 0px;
     }
 
     .header-user-dropdown .header-limiter .nav2 a {
         font-size: 14px;
+        margin: 0px 0px 0px 0px;
     }
 
 }
@@ -192,22 +197,27 @@
         font: normal 15px Cookie, Arial, Helvetica, sans-serif;
     }
 
-    .header-user-dropdown .header-limiter a {}
+    .header-user-dropdown .header-limiter a {
+    }
 
     .header-user-dropdown .header-limiter nav {
         font: 12px Arial, Helvetica, sans-serif;
+        
     }
 
     .header-user-dropdown .header-limiter nav a {
         font-size: 12px;
+        margin: 0px 0px 0px 0px;
     }
 
     .header-user-dropdown .header-limiter .nav2 {
         font: 12px Arial, Helvetica, sans-serif;
+        
     }
 
     .header-user-dropdown .header-limiter .nav2 a {
         font-size: 12px;
+        margin: 0px 0px 0px 0px;
     }
 
 }

@@ -22,7 +22,10 @@ body {
     text-align: center;
 }
 
-
+.littlePad {
+    margin-left: 20px;
+    margin-top: -80px;
+}
 
 /* MAIN BILLEDE */
 
@@ -86,6 +89,12 @@ body {
     margin-top: -50px;
 }
 
+.account {
+    float: left;
+    margin-left: 60px;
+}
+
+
 /*-----------------------------------
 		TEKST
 ------------------------------------*/
@@ -134,7 +143,7 @@ h1 {
 }
 
 .latestProjects {
-    margin: 40px auto 20px auto;
+    margin: 40px auto 0px auto;
     text-align: center;
 }
 
@@ -150,9 +159,9 @@ h1 {
     font-size: 16px;
     color: #757879;
     width: 260px;
-    height: 150px;
+    height: 100px;
     text-align: left;
-    margin: 13px auto 60px auto;
+    margin: 13px auto 20px auto;
 }
 
 .latestProjects p a {
