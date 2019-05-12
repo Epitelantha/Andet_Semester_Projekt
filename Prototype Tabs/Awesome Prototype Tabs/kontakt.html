@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Prototype Hjem</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/headerUserDropdown.css">
+    <link rel="stylesheet" href="css/kontaktStyle.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+    <!-- Create.js -->
+    <script src="lib/easeljs-NEXT.combined.js"></script>
+    <script src="lib/preloadjs-0.4.1.min.js"></script>
+    <script src="lib/tweenjs-0.5.1.min.js"></script>
+
+</head>
+
+<body onload="init()" style="margin: 0px">
+
+    <!--  Navigation Bar -->
+    <header class="header-user-dropdown" id="myHeader">
+
+        <div class="header-limiter">
+            <h1><a href="#" id="titlePartOne">Pheonix<span id="titlePartTwo">Klip</span></a></h1>
+
+            <nav>
+                <a href="home.html">Hjem</a>
+                <a href="kalender.html">Kalender</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+
+            <nav class="nav2">
+                <a href="logout.html">Log ud</a>
+                <a href="account.html">Bruger</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <div class="pictureFrame">
+        <br>
+        <img src="img/dresserShort.jpg">
+    </div>
+
+    <h1 class="kontakth1">Kontaktinformationer</h1>
+
+    <div class="containerKontakt">
+        <form>
+
+            <label for="fname">Navn</label>
+            <input type="text" id="fname" name="firstname" placeholder="Dit fulde navn">
+
+            <label for="lname">Mail</label>
+            <input type="text" id="lname" name="lastname" placeholder="eksempel@eksempel.dk">
+
+            <label for="subject">Besked</label>
+            <textarea id="subject" name="subject" placeholder="..." style="height:200px"></textarea>
+
+            <input type="submit" value="Send">
+
+        </form>
+    </div>
+
+    <div class="kontaktDiv">
+        <p>De kan komme i kontakt med os her:<br><br></p>
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p class="adresse"><span>21 Opfundetgade</span> Odense, Danmark</p>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p class="telefone">+45 12345678</p>
+        </div>
+        <div class="footer-ikoner">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/Epitelantha/Andet_Semester_Projekt" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <canvas id="canvas" width="300" height="45" style="border: black solid 0px"></canvas>
+
+    <script>
+        var stage;
+
+        function init() {
+            stage = new createjs.Stage(document.getElementById('canvas'));
+            canvas.width = window.innerWidth;
+            createjs.Ticker.addEventListener("tick", handleTick);
+            createjs.Ticker.setFPS(60);
+            start();
+
+        }
+
+        function handleTick(e) {
+            stage.update();
+        }
+
+        function start() {
+
+            var circle = new createjs.Shape();
+            circle.graphics.beginStroke('#000');
+            circle.graphics.beginLinearGradientFill(["#9400D3", "#4B0082", "#0000FF", "#00FF00", "#FFFF00", "#FF7F00", "#FF0000"], [0.02, 0.03, 0.05, 0.08, 0.09, 0.14, 0.15], 0, 0, 0, 300)
+            circle.graphics.drawCircle(22, 22, 20);
+            circle.x = window.innerWidth - 44;
+            circle.y = 22;
+            circle.regX = 22;
+            circle.regY = 22;
+            stage.addChild(circle);
+
+            createjs.Tween.get(circle).to({
+                rotation: 400000
+            }, 600000);
+        }
+
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer-klasse">
+        <!-- Venstre -->
+        <div class="footer-venstre">
+            <img src="img/logo.png" alt="Logo" width="60" height="60">
+            <p class="footer-links">
+                <a href="home.html">Home</a>
+                ·
+                <a href="kalender.html">Kalender</a>
+                ·
+                <a href="kontakt.html">Kontakt</a>
+            </p>
+            <p class="footer-navn">Phoenix Klip &copy; 2019</p>
+        </div>
+        <!-- Center -->
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p class="adresse"><span>21 Opfundetgade</span> Odense, Danmark</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p class="telefone">+45 12345678</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p class="mailAdresse"><a href="mailto:horol18@student.sdu.dk">horol18@student.sdu.dk</a></p>
+            </div>
+        </div>
+        <!-- Højre -->
+        <div class="footer-hoejre">
+            <p class="footer-om">
+                <span>Om os</span>
+                Vi er en lille frisør salon i Odense <br>
+                Vi klipper alle til realistiske priser
+            </p>
+            <div class="footer-ikoner">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/Epitelantha/Andet_Semester_Projekt" target="_blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/changeColor.js"></script>
+    <script src="js/access.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            var userMenu = $('.header-user-dropdown .header-user-menu');
+
+            userMenu.on('touchend', function(e) {
+
+                userMenu.addClass('show');
+
+                e.preventDefault();
+                e.stopPropagation();
+
+            });
+
+            // This code makes the user dropdown work on mobile devices
+
+            $(document).on('touchend', function(e) {
+
+                // If the page is touched anywhere outside the user menu, close it
+                userMenu.removeClass('show');
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
