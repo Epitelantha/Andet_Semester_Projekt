@@ -1,3 +1,4 @@
+/*--- Ugevælger lavet fra bunden... ---*/
 $(document).ready(function() {
     
     
@@ -6,6 +7,7 @@ $(document).ready(function() {
         this.year = element.find(".en-weekchooser-year");
         this.week = element.find(".en-weekchooser-week");
         this.next = element.find(".en-weekchooser-next");
+        this.current = element.find(".en-weekchooser-current");
         this.previous = element.find(".en-weekchooser-previous");
         
         var now = new Date();
@@ -24,14 +26,18 @@ $(document).ready(function() {
             e.stopPropagation();
             self.nextWeek(e);
         });
-       this.previous.on('click', function (e) {
+        this.previous.on('click', function (e) {
             e.stopPropagation();
             self.previousWeek(e);
-       }); 
+        }); 
+        this.current.on('click', function (e) {
+            e.stopPropagation();
+            self.currentWeek(e);
+        });       
         this.year.on('change', function (e) {
             e.stopPropagation();
             self.changeYear(e);
-       }); 
+        }); 
         this.week.on('change', function (e) {
             e.stopPropagation();
             self.changeWeek(e);
@@ -71,6 +77,21 @@ $(document).ready(function() {
                 self.week.val(self.week.children('option:last').val());
             }
         }
+        self.element.trigger("change");
+    };
+    
+    WeekChooser.prototype.currentWeek = function (e) {
+        var self = this;
+        var today = new Date();
+        var thursday = getNearestThursdayForDate(today);
+        var year = thursday.getFullYear();
+        if (self.year.val() != year) {
+            self.year.val(year);
+            self.populateWeek(parseInt(year));
+        };
+        var week = getWeek(today);
+            
+        self.week.val(week);    
         self.element.trigger("change");
     };
     

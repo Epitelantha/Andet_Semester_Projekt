@@ -1,6 +1,6 @@
 var mainColor = '#003bff';
 var secondaryColor = '#548ce5';
-var backgroundColor = '#292c2f;';
+var backgroundColor = '#292c2f';
 
 var titleOne = 'Salon';
 var titleTwo = 'Søndergade';
