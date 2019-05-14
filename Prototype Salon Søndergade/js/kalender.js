@@ -6,7 +6,7 @@ $(document).ready(function() {
 	if( !transitionsSupported ) transitionEnd = 'noTransition';
 
     function BookingKalender( element ) {
-       		this.element = element;
+       	this.element = element;
 		this.timeline = this.element.find('.timeline');
 		this.timelineItems = this.timeline.find('li');
 		this.timelineItemsNumber = this.timelineItems.length;
@@ -37,21 +37,6 @@ $(document).ready(function() {
             self.scheduleReset();
             self.placeEvents();
         });
-        this.modal.find('input[name=tid]').on('click', function() {
-        var tid = self.modal.find('input[name=tid]:checked').val();
-        var start = self.selectedEvent.data('start');
-        var timestamp = getScheduleTimestamp(start) + 60;
-        if(tid == "30min") {
-            timestamp -= 30;
-        }
-        if(tid == "90min") {
-            timestamp += 30;
-        }
-        var minutes = (timestamp % 60) + "";
-        minutes = minutes.length < 2 ? "0" + minutes : minutes;
-        var end = Math.floor(timestamp / 60) + ":" + minutes;
-        self.modalHeader.find('.event-date').text(start + ' - ' + end);     
-        });
         
         this.weekchooser = wc.data('weekchooser');
 		this.initSchedule();
@@ -71,15 +56,13 @@ $(document).ready(function() {
         var week = this.weekchooser.getSelectedWeek();
         $.each(this.database.load(), function(){
             if(this.year == year && this.week == week) {
-                var event = $('<li class="single-event" data-event="event-2"><a href="#0"><em class="event-name">Booking</em></a></li>');
-                event.data('day', this.day);
-                event.data('start', this.start);
-                event.data('end', this.end);
-                event.data('fornavn', this.fornavn);
-                event.data('efternavn', this.efternavn);
-                event.data('tlfnr', this.tlfnr);
-                event.data('email', this.email);
-                event.data('komment', this.komment);
+                var event = $('<li class="single-event"><a href="#0"><span class="event-date">'+this.start+' - '+this.end+'</span><em class="event-name">Booking</em></a></li>');
+                event.on('click', 'a', function(event){
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if( !self.animating ) self.openModal($(this));
+                });
+                event.data('aftale', this);
                 self.eventsGroup.eq(this.day).find('ul').append(event);
             }
         });
@@ -112,31 +95,14 @@ $(document).ready(function() {
     BookingKalender.prototype.initEvents = function() {
         var self = this;
 
-        this.singleEvents.each(function(){
-            //create the .event-date element for each event
-            var durationLabel = '<span class="event-date">'+$(this).data('start')+' - '+$(this).data('end')+'</span>';
-            $(this).children('a').prepend($(durationLabel));
-
-            //detect click on the event and open the modal
-            $(this).on('click', 'a', function(event){
-                event.preventDefault();
-                event.stopPropagation();
-                if( !self.animating ) self.openModal($(this));
-            });
-        });
-
         //close modal window
         this.modal.on('click', '.close, #formular input[name=anuller]', function(event){
 			event.preventDefault();
 			if( !self.animating ) self.closeModal(self.eventsGroup.find('.selected-event'));
         });
-            this.modal.on('click', '#formular input[name=bekræft]', function(event){
-			event.preventDefault();
-                
+        
+        this.modal.on('click', '#formular input[name=bekræft]', function(event){        
             self.gemBooking(event);
-                
-
-			if( !self.animating ) self.closeModal(self.eventsGroup.find('.selected-event'));
         });
         
         this.element.on('click', '.cover-layer', function(event){
@@ -146,14 +112,31 @@ $(document).ready(function() {
         this.element.on('click', '.events-group', function(event) {
             self.opretBooking(event, $(this)); 
         });
+        
+        this.modal.on('click', '#formular input[name=tid]', function() {
+          var tid = self.modal.find('input[name=tid]:checked').val();
+          var start = self.selectedEvent.data('aftale').start;
+          var timestamp = getScheduleTimestamp(start) + 60;
+          if(tid == "30min") {
+            timestamp -= 30;
+          }
+          if(tid == "90min") {
+            timestamp += 30;
+          }
+          var minutes = (timestamp % 60) + "";
+          minutes = minutes.length < 2 ? "0" + minutes : minutes;
+          var end = Math.floor(timestamp / 60) + ":" + minutes;
+          self.modalHeader.find('.event-date').text(start + ' - ' + end);     
+        });
     };
     
     BookingKalender.prototype.placeEvents = function() {
 		var self = this;
 		this.singleEvents.each(function(){
 			//place each event in the grid -> need to set top position and height
-			var start = getScheduleTimestamp($(this).data('start')),
-				duration = getScheduleTimestamp($(this).data('end')) - start;
+			var aftale = $(this).data('aftale'),
+                start = getScheduleTimestamp(aftale.start),
+				duration = getScheduleTimestamp(aftale.end) - start;
 
 			var eventTop = self.eventSlotHeight*(start - self.timelineStart)/self.timelineUnitDuration,
 				eventHeight = self.eventSlotHeight*duration/self.timelineUnitDuration;
@@ -175,21 +158,22 @@ $(document).ready(function() {
 		//update event name and time
 		this.modalHeader.find('.event-name').text(event.find('.event-name').text());
 		this.modalHeader.find('.event-date').text(event.find('.event-date').text());
-		this.modal.attr('data-event', event.parent().attr('data-event'));
 
         this.selectedEvent = event.parent();
         
-		//update event content
-		//this.modalBody.find('.event-info').load(event.parent().attr('data-content')+'.html .event-info > *', function(data){
-			//once the event content has been loaded
-		//	self.element.addClass('content-loaded');
-		//});
         self.element.addClass('content-loaded');
         var form = $('#formular');
         var evt = event.parent();
-        //form.find('input[name=tid]:checked').val();
        
-        var duration = getScheduleTimestamp(evt.data('end')) - getScheduleTimestamp(evt.data('start'));
+        var aftale = evt.data('aftale');
+        
+        var date = addDays(getFirstThursday(aftale.year), (aftale.week-1) * 7 + aftale.day - 3);
+        
+        var dateString = date.getDate() + "/" + (date.getMonth() + 1) + "-" + date.getFullYear();
+        
+        this.modal.find('.dato').text(dateString);
+        
+        var duration = getScheduleTimestamp(aftale.end) - getScheduleTimestamp(aftale.start);
         var tid = "60min";
         if(duration == 30) {
             tid = "30min";
@@ -198,37 +182,37 @@ $(document).ready(function() {
             tid = "90min";
         }
         
-        this.modal.find('.klokken').text(evt.data('start'));
-        if(evt.data('day') == 0) {
+        this.modal.find('.klokken').text(aftale.start);
+        if(aftale.day == 0) {
             this.modal.find('.ugedag').text('Mandag')
         }
-        if(evt.data('day') == 1) {
+        if(aftale.day == 1) {
             this.modal.find('.ugedag').text('Tirsdag')
         }
-        if(evt.data('day') == 2) {
+        if(aftale.day == 2) {
             this.modal.find('.ugedag').text('Onsdag')
         }
-        if(evt.data('day') == 3) {
+        if(aftale.day == 3) {
             this.modal.find('.ugedag').text('Torsdag')
         }
-        if(evt.data('day') == 4) {
+        if(aftale.day == 4) {
             this.modal.find('.ugedag').text('Fredag')
         }
-        if(evt.data('day') == 5) {
+        if(aftale.day == 5) {
             this.modal.find('.ugedag').text('Lørdag')
         }
-        if(evt.data('day') == 6) {
+        if(aftale.day == 6) {
             this.modal.find('.ugedag').text('Søndag')
         }
         
         form.find('input[name=tid]').each(function() {
            $(this).attr('checked', $(this).val() == tid); 
         });
-        form.find('input[name=fornavn]').val(evt.data('fornavn'));
-        form.find('input[name=efternavn]').val(evt.data('efternavn'));
-        form.find('input[name=tlfnr]').val(evt.data('tlfnr'));
-        form.find('input[name=email]').val(evt.data('email'));
-        form.find('textarea[name=komment]').val(evt.data('komment'));
+        form.find('input[name=fornavn]').val(aftale.fornavn);
+        form.find('input[name=efternavn]').val(aftale.efternavn);
+        form.find('input[name=tlfnr]').val(aftale.tlfnr);
+        form.find('input[name=email]').val(aftale.email);
+        form.find('textarea[name=komment]').val(aftale.komment);
         
         var isNew = evt.is('.new-event');
         form.find('input[name=fornavn],input[name=efternavn],input[name=tlfnr],input[name=email],textarea[name=komment]').attr('readonly', !isNew);
@@ -325,72 +309,92 @@ $(document).ready(function() {
         
         var day = group.index();
         
-        var listItem = $('<li class="single-event" data-event="event-2"><a href="#0"><em class="event-name">Book en tid</em></a></li>');
+        var listItem = $('<li class="single-event"><a href="#0"><em class="event-name">Book en tid</em></a></li>');
  
         group.find('ul').append(listItem);
-        listItem.data('day', day);
-        listItem.data('start', start);
-        listItem.data('end', end);
-                    var durationLabel = '<span class="event-date">'+listItem.data('start')+' - '+listItem.data('end')+'</span>';
-            listItem.children('a').prepend($(durationLabel));
+        var year = this.weekchooser.getSelectedYear();
+        var week = this.weekchooser.getSelectedWeek();
+        listItem.data('aftale', new Aftale(year, week, day, start, end));
+        var durationLabel = '<span class="event-date">'+start+' - '+end+'</span>';
+        listItem.children('a').prepend($(durationLabel));
 
-            //detect click on the event and open the modal
-            listItem.on('click', 'a', function(event){
-                event.preventDefault();
-                event.stopPropagation();
-                if( !self.animating ) self.openModal($(this));
-            });
+        //detect click on the event and open the modal
+        listItem.on('click', 'a', function(event){
+            event.preventDefault();
+            event.stopPropagation();
+            if( !self.animating ) self.openModal($(this));
+        });
         
         self.singleEvents = self.eventsGroup.find('.single-event');
         self.placeEvents();
-        var event =listItem.find('a');
+        var event = listItem.find('a');
         listItem.addClass("new-event");
         self.openModal(event);
     };
 
     BookingKalender.prototype.gemBooking = function(event) {
+        event.preventDefault();
+        var self = this;
+        var isValid = true;
         if(this.selectedEvent.is('.new-event')) {
-        var form = $('#formular');
-        var tid = form.find('input[name=tid]:checked').val();
-        var fornavn = form.find('input[name=fornavn]').val();
-        var efternavn = form.find('input[name=efternavn]').val();
-        var tlfnr = form.find('input[name=tlf]').val();
-        var email = form.find('input[name=email]').val();
-        var komment = form.find('textarea[name=komment]').val();
+            var form = $('#formular');
+            var tid = form.find('input[name=tid]:checked').val();
+            var fornavn = form.find('input[name=fornavn]').val();
+            var efternavn = form.find('input[name=efternavn]').val();
+            var tlfnr = form.find('input[name=tlfnr]').val();
+            var email = form.find('input[name=email]').val();
+            var komment = form.find('textarea[name=komment]').val();
         
-        var year = this.weekchooser.getSelectedYear();
-        var week = this.weekchooser.getSelectedWeek();
-        var day = this.selectedEvent.data('day');
-        var start = this.selectedEvent.data('start');
-        var timestamp = getScheduleTimestamp(start) + 60;
-        if(tid == "30min") {
-            timestamp -= 30;
-        }
-        if(tid == "90min") {
-            timestamp += 30;
-        }
-        var minutes = (timestamp % 60) + "";
-        minutes = minutes.length < 2 ? "0" + minutes : minutes;
-        var end = Math.floor(timestamp / 60) + ":" + minutes;
-        
-        this.selectedEvent.data('end', end);
-        this.selectedEvent.data('fornavn', fornavn);
-        this.selectedEvent.data('efternavn', efternavn);
-        this.selectedEvent.data('tlfnr', tlfnr);
-        this.selectedEvent.data('email', email);
-        this.selectedEvent.data('komment', komment);
-        
-        var aftale = new Aftale(
-            year, week, day, start, end, fornavn, efternavn, tlfnr, email, komment
-        );
-        
-        this.database.create(aftale);
-            this.selectedEvent.find('.event-date').text(start+' - '+end);
-            alert('Aftalen er nu bekræftet');
-        }
-        this.selectedEvent.removeClass('new-event');
-        this.placeEvents();
+            if (!fornavn || !efternavn || !tlfnr || !email) {
+                isValid = false;
+            }
+            
+            var aftale = this.selectedEvent.data('aftale');
+
+            var timestamp = getScheduleTimestamp(aftale.start) + 60;
+            if(tid == "30min") {
+                timestamp -= 30;
+            }
+            if(tid == "90min") {
+                timestamp += 30;
+            }
+            var minutes = (timestamp % 60) + "";
+            minutes = minutes.length < 2 ? "0" + minutes : minutes;
+            var end = Math.floor(timestamp / 60) + ":" + minutes;
                 
+            var aftale = new Aftale(
+                aftale.year, aftale.week, aftale.day, aftale.start, end, fornavn, efternavn, tlfnr, email, komment
+            );
+        
+            if(isValid){
+                this.database.create(aftale);
+                form.find('input').removeClass('error');
+                this.selectedEvent.data('aftale', aftale);
+                this.selectedEvent.find('.event-date').text(aftale.start+' - '+aftale.end);
+                this.selectedEvent.find('.event-name').text('Booking');
+                alert('Aftalen er nu bekræftet');
+            }
+            else{
+                //Indsæt stjerne og rødt felt
+                if(!fornavn) {
+                    form.find('input[name=fornavn]').addClass('error');
+                }
+                if(!efternavn) {
+                    form.find('input[name=efternavn]').addClass('error');
+                }
+                if(!tlfnr) {
+                    form.find('input[name=tlfnr]').addClass('error');
+                }
+                if(!email) {
+                    form.find('input[name=email]').addClass('error');
+                }
+            }
+        }
+        if(isValid){
+            this.selectedEvent.removeClass('new-event');
+            this.placeEvents();
+            if( !self.animating ) self.closeModal(self.eventsGroup.find('.selected-event')); 
+        }
     };
 
     BookingKalender.prototype.closeModal = function(event) {
@@ -457,11 +461,6 @@ $(document).ready(function() {
             event.closest("li").remove();
         }
 	};
-
-
-    BookingKalender.prototype.visBooking = function(){
-    
-    };
     
     BookingKalender.prototype.mq = function(){
 		//get MQ value ('desktop' or 'mobile') 
@@ -584,5 +583,17 @@ $(document).ready(function() {
 			'-o-transform': value,
 			'transform': value
         });
+    }
+     function addDays(date, days) {
+        return new Date(date.getFullYear(), date.getMonth(), date.getDate() + days);
+    }
+    
+    function getNearestThursdayForDate(date) {
+        var day = (date.getDay() + 6) % 7;
+        return addDays(date, 3 - day);
+    }
+    
+    function getFirstThursday(year) {
+        return getNearestThursdayForDate(new Date(year, 0, 4));
     }
 });

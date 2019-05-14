@@ -46,7 +46,6 @@ $(function () {
         mail = localStorage.getItem("mail");
     }
 
-
     if (localStorage.getItem("mainColor") == null) {
         localStorage.setItem("mainColor", mainColor);
     }
@@ -73,5 +72,7 @@ $(function () {
     $('.kontaktDiv').css('border', '2px solid ' + secondaryColor);
     $('input[type=submit]').css('background-color', secondaryColor);
     $('input[type=submit]:hover').css('background-color', secondaryColor);
+    $('body')[0].style.setProperty('--mainColor', mainColor);
+    $('body')[0].style.setProperty('--backgroundColor', backgroundColor);
 
 });
