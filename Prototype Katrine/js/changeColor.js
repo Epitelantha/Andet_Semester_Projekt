@@ -58,4 +58,6 @@ $(function () {
     $('body')[0].style.setProperty('--mainColor', mainColor);
     $('body')[0].style.setProperty('--backgroundColor', backgroundColor);
     
+    $('.knap').css('background-color', backgroundColor), $('.knap' + ':' + 'hover').css('background-color', secondaryColor), $('.knap' + ':' + 'active').css('background-color', secondaryColor);
+    
 });
